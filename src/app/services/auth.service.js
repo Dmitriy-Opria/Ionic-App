@@ -13,7 +13,7 @@ var angular2_jwt_1 = require('angular2-jwt');
 var Auth = (function () {
     function Auth() {
         var _this = this;
-        this.lock = Auth0Lock('lb3513rLAgMWsrVEVaOSNgAV2Qx6BoQA', 'dimasangular.eu.auth0.com', {});
+        this.lock = new Auth0Lock('lb3513rLAgMWsrVEVaOSNgAV2Qx6BoQA', 'dimasangular.eu.auth0.com', {});
         this.lock.on("authenticated", function (authResult) {
             _this.lock.getProfile(authResult.idToken, function (error, profile) {
                 if (error) {

@@ -5,7 +5,7 @@ declare var Auth0Lock: any;
 
 @Injectable()
 export class Auth{
-    lock = Auth0Lock('lb3513rLAgMWsrVEVaOSNgAV2Qx6BoQA', 'dimasangular.eu.auth0.com', {});
+    lock = new Auth0Lock('lb3513rLAgMWsrVEVaOSNgAV2Qx6BoQA', 'dimasangular.eu.auth0.com', {});
 
     constructor(){
         this.lock.on("authenticated", (authResult: any) =>{
