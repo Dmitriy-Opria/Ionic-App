@@ -10,10 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var angular2_jwt_1 = require('angular2-jwt');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
 var home_component_1 = require('./component/home/home.component');
 var profile_component_1 = require('./component/profile/profile.component');
+var auth_service_1 = require('./services/auth.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,7 +29,10 @@ var AppModule = (function () {
                 profile_component_1.ProfileComponent
             ],
             bootstrap: [app_component_1.AppComponent],
-            providers: [app_routing_1.appRoutingProviders]
+            providers: [app_routing_1.appRoutingProviders,
+                angular2_jwt_1.AUTH_PROVIDERS,
+                auth_service_1.Auth
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
