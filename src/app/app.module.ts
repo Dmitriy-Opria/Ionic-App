@@ -7,6 +7,7 @@ import { appRoutingProviders, routing } from './app.routing';
 import { HomeComponent } from './component/home/home.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { Auth } from './services/auth.service';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { Auth } from './services/auth.service';
   bootstrap:    [ AppComponent ],
   providers:    [ appRoutingProviders,
                   AUTH_PROVIDERS,
-                  Auth
+                  Auth,
+                  AuthGuard
                 ]
 })
 export class AppModule { }
